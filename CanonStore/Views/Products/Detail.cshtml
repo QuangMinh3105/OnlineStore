@@ -1,0 +1,19 @@
+﻿@model CanonStore.Models.Product
+
+    @{
+        ViewBag.Title = "Detail";
+        Layout = "~/Views/Shared/AdminLayout.cshtml";
+    }
+
+    <div class="main">
+        <h1>Produt Detail</h1>
+        <img src="~/Content/images/@Model.Image" alt="Alternate Text" style="width:220px; height:200px" />
+        <ul>
+            <li> <p>@Model.Name</p></li>
+            <li> <p>@Model.Brand</p></li>
+            <li> <p>@Model.Price</p></li>
+            <li> <p>@Model.Description</p></li>
+
+        </ul>
+    </div>
+

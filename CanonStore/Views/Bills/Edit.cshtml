@@ -1,0 +1,65 @@
+﻿@using CanonStore.Models
+@model CanonStore.Models.Bill
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    ViewBag.Title = "Edit";
+
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+
+}
+
+<div class="main">
+    <div class="form_content">
+        <h2>Edit Bill</h2>
+        <div class="form_product">
+
+            @using (Html.BeginForm("Edit", "Bills", FormMethod.Post))
+            {
+                <div class="row">
+
+                    @Html.HiddenFor(m => m.IdBill, new { @class = "form-control" })<br><br>
+                </div>
+                <div class="row">
+                  
+                    <label for="Type_Product" class="form_label">Customer:</label><br>
+                    @Html.DropDownListFor(m => m.IdCustomer,
+                       new SelectList(ViewBag.customers, "id", "Name"),
+                       new { @class = "form-control" })<br><br>
+                    
+                    <br><br>
+                </div>
+                <div class="row">
+                    <label for="Type_Product" class="form_label">Emloyee:</label><br>
+                    @Html.DropDownListFor(m => m.IdEmployee,
+                        new SelectList(ViewBag.emloyees, "Id", "Name"),
+                        new { @class = "form-control", @readonly = "readonly" })<br><br>
+                </div>
+                <div class="row">
+                    <label for="Type_Product" class="form_label">Status:</label><br>
+                    @Html.DropDownListFor(m => m.Status,
+                        new SelectList(ViewBag.bill_Statuses, "IdStatus", "NameStatus"),
+                        new { @class = "form-control" })<br><br>
+                </div>
+                <div class="row">
+                    <label for="Date_Created" class="form_label">Date_Created:</label>
+                    <br>
+                    @Html.TextBoxFor(m => m.Date_Created, new { @class = "form-control", @readonly = "readonly" })
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <label for="Total" class="form_label">Total:</label>
+                    <br>
+                    @Html.TextBoxFor(m => m.Total, new { @class = "form-control", @readonly = "readonly" })
+                    <br>
+                    <br>
+                </div>
+                <div class="btn_row">
+                    <input type="submit" value="Edit Bill" class="btn_addproduct">
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,131 @@
+﻿@*@model List<CanonStore.Models.Product>*@
+@using CanonStore.Models
+@model PagedList.IPagedList<CanonStore.Models.Product>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_shopLayout.cshtml";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+}
+<style>
+    .com_btn {
+        text-align: center;
+        padding: 3px 30px;
+        background-color: #f0d43a;
+        color: #ffffff;
+        border-radius: 5px;
+        transition: all 0.3s;
+        border: 1px solid #f0d43a;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+        .com_btn:hover {
+            transition: all 0.3s;
+            background-color: #edcc12;
+        }
+
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+<!-- shop section -->
+<section class="shop_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <div>
+                <div>
+                    @using (Html.BeginForm("Products", "Shop", FormMethod.Get))
+                    {
+                        <p>
+                            @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @style = "font-size: 20px" })
+                            <input type="submit" value="Search" class="com_btn" />
+                        </p>
+                    }
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="box">
+                            @Html.ActionLink("A-Z", "Products", new { sortOrder = "name", currentFilter = ViewBag.CurrentFilter })
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="box">
+                            @Html.ActionLink("Z-A", "Products", new { sortOrder = "name_desc", currentFilter = ViewBag.CurrentFilter })
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="box">
+                            @Html.ActionLink("Price", "Products", new { sortOrder = "price", currentFilter = ViewBag.CurrentFilter }, new { @class = "fa fa-arrow-up" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="box">
+                            @Html.ActionLink("Price", "Products", new { sortOrder = "price_desc", currentFilter = ViewBag.CurrentFilter }, new { @class = "fa fa-arrow-down" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-xl-3">
+                    <div class="box">
+                        <a href="~/Shop/ProductDetails/@item.Id_product">
+                            <div class="img-box">
+                                <img src="~/Content/images/@item.Image" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    @item.Name
+                                    @*</h6>
+                                        <h6>
+                                            Price:*@
+                                    <br />
+                                    <span>
+                                        $@item.Price
+                                    </span>
+                                </h6>
+                            </div>
+                            <div class="new">
+                                <span>
+                                    @{ try
+                                        {
+                                            foreach (var i in ctx.proc_AVG_star_product((int?)item.Id_product))
+                                            {
+                                                @i.AVG_Star.Value.ToString("#.#") <i class="fa fa-star" aria-hidden="true"></i>
+                                            }
+                                        }
+                                        catch
+                                        {
+                                            <small>0 <i class="fa fa-star" aria-hidden="true"></i></small>
+                                        }
+                                    }
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="container">
+            <section class="shop_section layout_padding">
+                <div class="panel-body">
+                    <div class="pull-right">
+                        <br />
+                        <!-- Thêm mã phân trang -->
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                        <br />
+                        @Html.PagedListPager(Model, page => Url.Action("Products", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+                        <!-- Kết thúc -->
+                        <br /><br />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+
+

@@ -1,0 +1,48 @@
+﻿
+
+
+@model CanonStore.Models.Customer
+@{
+    Layout = null;
+}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Login</title>
+    <link type="text/css" rel="stylesheet" style="" href="~/Content/css/Login.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        @using (Html.BeginForm("Login", "Shop", FormMethod.Post))
+        {
+            <h1>Login</h1>
+            <div class="form-text">
+
+                @Html.TextBoxFor(c => c.UserName, "", new { @class = "input", @placeholder = "UserName" })
+                <br />
+                @Html.ValidationMessageFor(c => c.UserName)
+                <br />
+            </div>
+            <div class="form-text">
+                @Html.PasswordFor(c => c.Password, new { @class = "input", @placeholder = "Password" })
+                <br />
+                @Html.ValidationMessageFor(c => c.Password)
+                <br />
+            </div>
+            <span style="color:red;">@ViewBag.error</span>
+            <input type="submit" value="Login" id="btn-Login">
+            <span>Do not have an account? Registration <a href="~/Shop/SignUp">Here</a></span>
+        }
+    </div>
+
+</body>
+
+</html>
+

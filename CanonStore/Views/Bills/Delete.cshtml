@@ -1,0 +1,72 @@
+﻿@using CanonStore.Models
+@model CanonStore.Models.Bill
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+    ViewBag.Title = "Delete";
+}
+
+<div class="main">
+    <h1>Bill</h1><br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Emloyee</th>
+                <th scope="col">Total</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Model.IdBill</th>
+                <td>@Model.Date_Created</td>
+                <td>@ViewBag.customer.Name</td>
+                <td>@ViewBag.emloyee.Name</td>
+                <td>$ @Model.Total.Value.ToString("#,##0.00")</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Bill Detail</h1><br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                @*<th scope="col">#</th>
+                    <th scope="col">Id Bill</th>*@
+                <th scope="col">Id Product</th>
+                <th scope="col">Qualily</th>
+                <th scope="col">Price</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.bill_Details)
+            {
+                <tr>
+                    @*<th scope="row">@item.Id</th>
+                        <td>@item.IdBill</td>*@
+                    @{
+                        int id = item.IdProduct;
+
+                        Product product = ctx.Products.Where(c => c.Id_product == id).FirstOrDefault();
+                        ViewBag.pro = product;
+                    }
+                    <td>
+                        <p>@ViewBag.pro.Name</p>
+                        <img src="~/Content/images/@ViewBag.pro.Image" alt="Alternate Text" style="width:120px; height:100px" />
+                    </td>
+                    <td>@item.Quality</td>
+                    <td>$ @item.Price.ToString("#,##0.00")</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h3 style="color:red;"> DELETE </h3>
+    <a href="/Bills/DeleteConfirm/@Model.IdBill" style="color:red;font-size:50px;"> <i class="fa fa-trash" aria-hidden="true"></i> </a>
+</div>
+

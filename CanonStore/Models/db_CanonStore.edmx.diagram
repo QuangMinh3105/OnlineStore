@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a03c2530a2284414acc2bd5fddb6a93a" Name="Diagram1">
+        <EntityTypeShape EntityType="db_CanonStoreModel.Accessory" Width="1.5" PointX="0.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Bill_details" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Bill_Status" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Bill" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Comment" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Customer" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Discount" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Employee" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Product_Types" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_CanonStoreModel.Product" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Product_Accessory" ManuallyRouted="false" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Bill_details_Bill" ManuallyRouted="false" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Bill_details_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Bill_Bill_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Bill_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Bill_Discounts" ManuallyRouted="false" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Bill_Emloyee" ManuallyRouted="false" />
+        <AssociationConnector Association="db_CanonStoreModel.FK_Product_Product_Type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

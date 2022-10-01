@@ -1,0 +1,138 @@
+﻿@using CanonStore.Models
+
+@*@model List<CanonStore.Models.Product>*@
+@model PagedList.IPagedList<CanonStore.Models.Product>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+
+}
+
+
+<div class="main">
+
+    <h1>Produts</h1><br />
+    <div style="width:200px;">
+        <a href="/Products/Create"><h3 style="color:Highlight; ">Add Product</h3></a>
+    </div>
+
+
+
+    <div style="text-align: center; margin-bottom: 50px; font-size: 20px;">
+        @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+        {
+            <p>
+                Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @style = "font-size: 20px" })
+                <input type="submit" value="Search" style="font-size: 20px;" />
+            </p>
+        }
+    </div>
+    <div style="display:flex; ">
+        @using (Html.BeginForm("ExportExcel", "Products"))
+        {
+
+            <input type="submit" value="Excel" style="font-size: 20px; padding:5px 10px; margin:10px;" />
+        }
+        @using (Html.BeginForm("ExportPDF", "Products", FormMethod.Post, new { target = "_blank" }))
+        {
+
+            <input type="submit" value="PDF" style="font-size: 20px; padding:5px 10px; margin:10px;" formtarget="_blank" />
+        }
+        <button style="font-size: 20px; padding:5px 10px; margin:10px;" formtarget="_blank" onclick="window.location.href='Products/Sales'">Sales</button>
+
+    </div>
+
+    <table class="table" id="myTable">
+        <thead>
+            <tr>
+                <th scope="col" style="text-decoration-line:underline;">
+                    @Html.ActionLink("#", "Index", new { sortOrder = "", currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th scope="col" style="text-decoration-line:underline;">
+                    @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th scope="col">Images</th>
+                <th scope="col" style="text-decoration-line:underline;">
+                    @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th scope="col">Brand</th>
+                <th scope="col">Type</th>
+                <th scope="col">Accessory</th>
+                <th scope="col">Aperture</th>
+                <th scope="col">Focal Distance</th>
+                <th scope="col">Shutter Speed</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Is Available</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id_product</th>
+                    <td>@item.Name</td>
+                    <td><img src="~/Content/images/@item.Image" alt="Alternate Text" style="width:120px; height:100px" /></td>
+                    <td>$ @item.Price.Value.ToString("#,##0.##")</td>
+                    @{
+                        Product_Types product_Type = ctx.Product_Types.Where(a => a.IdType == item.Type).FirstOrDefault();
+                        ViewBag.proT = product_Type;
+                        Accessory accessory = ctx.Accessories.Where(s => s.Id_Acc == item.Acc_Id).FirstOrDefault();
+                        //ViewBag.proA = accessory;
+                    }
+                    <td>@item.Brand</td>
+                    <td>@accessory.Name_Acc</td>
+                    <td>@ViewBag.proT.Name</td>
+                    <td>@item.Aperture</td>
+                    <td>@item.Focal_Distance</td>
+                    <td>@item.Shutter_Speed</td>
+                    <td> @item.Quantity_in_Stock</td>
+                    @if (item.Is_Available != null)
+                    {
+                        switch (item.Is_Available)
+                        {
+                            case true:
+                                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                break;
+                            case false:
+                                <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                break;
+                            default:
+                                <td></td>
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        <td>Null</td>
+                    }
+
+                    <td>
+                        <a href="/Products/Detail/@item.Id_product"><i class="fa fa-list" aria-hidden="true"></i></a> |
+                        <a href="~/Products/Edit/@item.Id_product"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                        <a href="~/Products/Delete/@item.Id_product"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <section class="panel">
+        <div class="panel-body">
+            <div class="pull-right">
+                <br />
+                <!-- Thêm mã phân trang -->
+                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                <br />
+
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+                <!-- Kết thúc -->
+            </div>
+        </div>
+    </section>
+</div>
+

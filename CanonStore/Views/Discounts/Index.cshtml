@@ -1,0 +1,69 @@
+﻿@model List<CanonStore.Models.Discount>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="main">
+
+    <h1>Discount: @Model.Count</h1>
+    <br />
+    <div style="width:200px;">
+        <a href="/Discounts/Create"><h3 style="color:Highlight; ">Add Discount</h3></a>
+    </div>
+
+    <table class="table" id="myTable">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Date Start</th>
+                <th>Date End</th>
+                <th>Value(%)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Dis_Code</td>
+                    <td>@item.Dis_Description</td>
+                    <td>
+                        @if (@item.Date_Start != null)
+                        {
+                            @item.Date_Start.Value.ToString("dd/MM/yyyy")
+                        }
+                    </td>
+                    @if (@item.Date_End < DateTime.Now)
+                    {
+                        <td style="color:red;">
+                            @if (@item.Date_End != null)
+                            {
+                                @item.Date_End.Value.ToString("dd/MM/yyyy")
+                            }
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            @if (@item.Date_End != null)
+                            {
+                                @item.Date_End.Value.ToString("dd/MM/yyyy")
+                            }
+                        </td>
+                    }
+                    <td>@item.Discount_Value</td>
+                    <td>
+                        @*<a href="/Discounts/Detail/@item.Dis_Code"><i class="fa fa-list" aria-hidden="true"></i></a>*@ 
+                        <a href="/Discounts/Edit/@item.Dis_Code"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                        <a href="/Discounts/Delete/@item.Dis_Code"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

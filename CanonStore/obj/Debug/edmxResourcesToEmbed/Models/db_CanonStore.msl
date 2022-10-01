@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_CanonStoreModelStoreContainer" CdmEntityContainer="db_CanonStoreEntities">
+    <EntitySetMapping Name="Accessories">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Accessory">
+        <MappingFragment StoreEntitySet="Accessories">
+          <ScalarProperty Name="Id_Acc" ColumnName="Id_Acc" />
+          <ScalarProperty Name="Name_Acc" ColumnName="Name_Acc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bill_details">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Bill_details">
+        <MappingFragment StoreEntitySet="Bill_details">
+          <ScalarProperty Name="IdBill" ColumnName="IdBill" />
+          <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bill_Status">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Bill_Status">
+        <MappingFragment StoreEntitySet="Bill_Status">
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+          <ScalarProperty Name="NameStatus" ColumnName="NameStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Bill">
+        <MappingFragment StoreEntitySet="Bills">
+          <ScalarProperty Name="IdBill" ColumnName="IdBill" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="IdCustomer" ColumnName="IdCustomer" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Discount_code" ColumnName="Discount_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Id_Customer" ColumnName="Id_Customer" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Com_txt" ColumnName="Com_txt" />
+          <ScalarProperty Name="Id_Bill" ColumnName="Id_Bill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="DayOfBirth" ColumnName="DayOfBirth" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discounts">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Discount">
+        <MappingFragment StoreEntitySet="Discounts">
+          <ScalarProperty Name="Dis_Code" ColumnName="Dis_Code" />
+          <ScalarProperty Name="Dis_Description" ColumnName="Dis_Description" />
+          <ScalarProperty Name="Date_Start" ColumnName="Date_Start" />
+          <ScalarProperty Name="Date_End" ColumnName="Date_End" />
+          <ScalarProperty Name="Discount_Value" ColumnName="Discount_Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="DayOfBirth" ColumnName="DayOfBirth" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Types">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Product_Types">
+        <MappingFragment StoreEntitySet="Product_Types">
+          <ScalarProperty Name="IdType" ColumnName="IdType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="db_CanonStoreModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id_product" ColumnName="Id_product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Acc_Id" ColumnName="Acc_Id" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="Quantity_in_Stock" ColumnName="Quantity_in_Stock" />
+          <ScalarProperty Name="Aperture" ColumnName="Aperture" />
+          <ScalarProperty Name="Focal_Distance" ColumnName="Focal_Distance" />
+          <ScalarProperty Name="Shutter_Speed" ColumnName="Shutter_Speed" />
+          <ScalarProperty Name="Is_Available" ColumnName="Is_Available" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="proc_AVG_star_product" FunctionName="db_CanonStoreModel.Store.proc_AVG_star_product">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_AVG_star_product_Result">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="AVG_Star" ColumnName="AVG_Star" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_sumproductbymonth" FunctionName="db_CanonStoreModel.Store.proc_sumproductbymonth">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumproductbymonth_Result">
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_sumsalesbydate" FunctionName="db_CanonStoreModel.Store.proc_sumsalesbydate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumsalesbydate_Result">
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_sumsalesbymonth" FunctionName="db_CanonStoreModel.Store.proc_sumsalesbymonth">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumsalesbymonth_Result">
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_sumsalesbyyear" FunctionName="db_CanonStoreModel.Store.proc_sumsalesbyyear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumsalesbyyear_Result">
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_Top5bestsellingproduct" FunctionName="db_CanonStoreModel.Store.proc_Top5bestsellingproduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_Top5bestsellingproduct_Result">
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

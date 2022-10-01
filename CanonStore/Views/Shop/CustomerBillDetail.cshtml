@@ -1,0 +1,158 @@
+﻿@using CanonStore.Models
+@model CanonStore.Models.Bill
+@{
+    ViewBag.Title = "CustomerBillDetail";
+    Layout = "~/Views/Shared/_shopLayout.cshtml";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+
+}
+<style>
+    .main {
+        margin: 50px 0px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+        justify-content: center;
+        margin: 50px 50px;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .d_j {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .ro {
+        margin: 20px;
+        font-size: 20px
+    }
+
+    .com_btn {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        padding: 10px 55px;
+        background-color: #f0d43a;
+        color: #ffffff;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid #f0d43a;
+        margin-top: 15px;
+    }
+
+        .com_btn:hover {
+            transition: all 0.3s;
+            background-color: #edcc12;
+        }
+
+    .item_box {
+        background-color: #f3f1f3;
+        padding: 20px;
+        margin: 40px;
+        display: flex;
+        justify-content: center;
+       
+        border-radius: 20px;
+    }
+    .right {
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        height: 200px;
+    }
+    .left{
+        width:50vw;
+    }
+</style>
+<div class="main">
+    <div class="left">
+        @foreach (var item in ViewBag.bill_Details)
+        {
+            <div class="item_box">
+                @{
+                    int id = item.IdProduct;
+
+                    Product product = ctx.Products.Where(c => c.Id_product == id).FirstOrDefault();
+                    ViewBag.pro = product;
+                }
+                <div style="width: 100%;">
+                    <div class="d_j ro">
+                        <div>
+                            <p>@ViewBag.pro.Name</p>
+                            <img src="~/Content/images/@ViewBag.pro.Image" alt="Alternate Text" style="width:120px; height:100px" />
+                        </div>
+                        <div class="ro d_j">
+                            <div class="ro">
+                                <h6>Price</h6>
+                                $ @ViewBag.pro.Price.ToString("###0.00")
+                            </div>
+                            <div class="ro">
+                                <h6>Qualily</h6>
+                                @item.Quality
+                            </div>
+                            <div class="ro">
+                                <h6>Line Total</h6>
+                                $ @item.Price.ToString("###0.00")
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d_j">
+                        @{
+                            Comment comment = ctx.Comments.Where(c => c.Id_Customer == Model.IdCustomer && c.Id_Bill == Model.IdBill && c.Id_Product == id).FirstOrDefault();
+                            if (comment != null)
+                            {
+                                <p style="color: #3b4a6b;font-size:20px;"><i class="fa fa-check-circle" aria-hidden="true"></i> Has been Comment</p>
+                            }
+                            else
+                            {
+                                using (Html.BeginForm("Comments", "Shop", FormMethod.Post))
+                                {
+                                    @Html.Hidden("Id_Bill", "", new { @Value = item.IdBill })
+                                    @Html.Hidden("Id", "", new { @Value = item.Id })
+                                    <input class="com_btn " type="submit" value="Comment" />
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="right">
+        <table>
+            <thead>
+                <tr>
+
+                    <th scope="col">Date Created</th>
+                    <th scope="col">Customer</th>
+
+                    <th scope="col">Total</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>@Model.Date_Created</td>
+                    <td>@ViewBag.customer.Name</td>
+
+                    <td> $ @Model.Total.Value.ToString("#,##0.00")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+

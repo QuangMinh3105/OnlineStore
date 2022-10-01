@@ -1,0 +1,119 @@
+﻿@using CanonStore.Models
+@model List<CanonStore.Models.Bill>
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    ViewBag.Title = "Index";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+
+
+}
+
+<div class="main">
+    <h1>Bill: @Model.Count</h1><br />
+    <div >
+        <div>
+            @using (Html.BeginForm("Index", "Bills", FormMethod.Post))
+            {
+                <div style="font-size: 20px; margin: 20px;">
+                    @Html.RadioButton("searchBy", "Day")<text> Day </text>
+                    @Html.RadioButton("searchBy", "Month")<text> Month </text>
+                    @Html.RadioButton("searchBy", "Year")<text> Year </text>
+                </div>
+                <div style="font-size:20px; margin:20px;">
+                    @Html.TextBox("date", "", new { @class = "input", type = "date", min = "2021-01-01", max = DateTime.Now.Date.ToString("yyyy-MM-dd"), value = DateTime.Now.Date, style = "font-size:20px;" })<input type="submit" style="font-size:20px;" />
+                </div>
+
+            }
+        </div>
+        <div style="display:flex;">
+            @using (Html.BeginForm("ExportExcel", "Bills"))
+            {
+                switch (ViewBag.co)
+                {
+                    case 1:
+                        @Html.Hidden("time", "Day")
+                        break;
+                    case 2:
+                        @Html.Hidden("time", "Month")
+                        break;
+                    case 3:
+                        @Html.Hidden("time", "Year")
+                        break;
+                }
+                <input type="submit" value="Excel" style="font-size: 20px; padding:5px 10px; margin:10px;" />
+            }
+            @using (Html.BeginForm("ExportPDF", "Bills", FormMethod.Post,new { target = "_blank" }))
+            {
+               
+                <input type="submit" value="PDF" style="font-size: 20px; padding:5px 10px; margin:10px;" formtarget="_blank" />
+            }
+        </div>
+    </div>
+
+
+
+    <p style="color:red;"> @ViewBag.searchBill</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.IdBill</th>
+                    <td>@item.Date_Created.ToString("dd/MM/yyyy")</td>
+                    @{
+
+                        Customer customer = ctx.Customers.Where(c => c.Id == item.IdCustomer).FirstOrDefault();
+                        ViewBag.cus = customer;
+                        List<Bill_details> bill_Details = ctx.Bill_details.Where(c => c.IdBill == item.IdBill).ToList();
+
+                        ViewBag.bill_Details = bill_Details.Count();
+
+                    }
+                    <td>@ViewBag.cus.Name</td>
+                    <td>@ViewBag.bill_Details</td>
+                    <td> @item.Discount_code</td>
+                    <td>$ @item.Total.Value.ToString("#,##0.00")</td>
+                    <td>
+                        <a href="/Bills/Detail/@item.IdBill"><i class="fa fa-list" aria-hidden="true"></i></a>|
+                        <a href="/Bills/Edit/@item.IdBill"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                        <a href="~/Bills/Delete/@item.IdBill"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div style="margin-top:50px;width:500px;">
+        @if (ViewBag.proc != null)
+            {
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Date Created</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var i in ViewBag.proc)
+                        {
+                            <tr>
+                                <td>@i.Day.ToString()</td>
+                                <td>$ @i.Total.ToString("#,##0.00")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        
+    </div>
+</div>

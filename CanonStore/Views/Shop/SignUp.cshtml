@@ -1,0 +1,105 @@
+﻿@model CanonStore.Models.Customer
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signup</title>
+    <link type="text/css" rel="stylesheet" style="" href="~/Content/css/Signup.css" />
+</head>
+<body>
+    <div class="wrapper">
+
+        @using (Html.BeginForm("SignUpSave", "Shop", FormMethod.Post))
+        {
+            <h2>Sign Up</h2>
+            <div class="form-text">
+
+                @Html.HiddenFor(m => m.Id)<br />
+            </div>
+
+            <div class="form-text">
+                <label for="Name" class="form_label">Customer Name:</label>
+
+                @Html.TextBoxFor(m => m.Name, "", new { @class = "input", @placeholder = "Name" })
+                <br />
+
+                @Html.ValidationMessageFor(m => m.Name, "")
+                <br />
+            </div>
+            <div class="form-text">
+                <label for="Address" class="form_label">Customer Address:</label>
+
+                @Html.TextBoxFor(m => m.Address, "", new { @class = "input", @placeholder = "Address" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Address, "")
+                <br />
+            </div>
+            <div class="form-text">
+                <label for="DayOfBirth" class="form_label">Customer Day Of Birth:</label>
+
+                @Html.TextBoxFor(m => m.DayOfBirth, "", new { @class = "input", type = "date" })
+                <br />
+
+                @Html.ValidationMessageFor(m => m.DayOfBirth)
+                <br />
+            </div>
+            <div class="form-text">
+                <label for="Phone" class="form_label">Customer Phone:</label>
+
+                @Html.TextBoxFor(m => m.Phone, "", new { @class = "input", @placeholder = "Phone" })
+                <br />
+
+                @Html.ValidationMessageFor(m => m.Phone)
+                <br />
+            </div>
+            <div class="form-text">
+                <label for="UserName" class="form_label">Customer UserName:</label>
+
+                @Html.TextBoxFor(m => m.UserName, "", new { @class = "input", @placeholder = "Username" })
+                <br />
+
+                @Html.ValidationMessageFor(m => m.UserName)
+                <br />
+            </div>
+            <div class="form-text">
+                <label for="Password" class="form_label">Customer Password:</label>
+
+                @Html.PasswordFor(m => m.Password, new { @class = "input", @placeholder = "Password" })
+                <br />
+
+                @Html.ValidationMessageFor(m => m.Password)
+                <br />
+            </div>
+            <div class="form-text">
+                <label for="Email" class="form_label">Customer Email:</label>
+
+                @Html.TextBoxFor(m => m.Email, new { @class = "input", @placeholder = "Example@Gmail.com" })
+                <br />
+
+                @Html.ValidationMessageFor(m => m.Email)
+                <br />
+            </div>
+            <div class="form-text">
+                
+
+                @Html.HiddenFor(m => m.DateCreated,DateTime.Now)
+               
+
+                
+            </div>
+
+            <input type="submit" value="Sign Up" id="btn-signup">
+
+        }
+
+    </div>
+</body>
+</html>
+
+
+
+

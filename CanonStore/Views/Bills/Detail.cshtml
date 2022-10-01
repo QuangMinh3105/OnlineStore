@@ -1,0 +1,92 @@
+﻿@using CanonStore.Models
+@model CanonStore.Models.Bill
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+    ViewBag.Title = "Details";
+}
+
+<div class="main">
+
+
+
+    <h1>Bill Detail</h1><br />
+   
+    <div style="display:flex; justify-content:space-around;">
+        <table class="table" style="width:40%;">
+            <thead>
+                <tr>
+                    @*<th scope="col">#</th>
+                        <th scope="col">Id Bill</th>*@
+                    <th scope="col">Id Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qualily</th>
+                    <th scope="col">Line Total</th>
+                    @*<th scope="col">Action</th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.bill_Details)
+                {
+                    <tr>
+                        @*<th scope="row">@item.Id</th>
+                            <td>@item.IdBill</td>*@
+                        @{
+                            int id = item.IdProduct;
+
+                            Product product = ctx.Products.Where(c => c.Id_product == id).FirstOrDefault();
+                            ViewBag.pro = product;
+                        }
+                        <td>
+                            <p>@ViewBag.pro.Name</p>
+                            <img src="~/Content/images/@ViewBag.pro.Image" alt="Alternate Text" style="width:120px; height:100px" />
+                        </td>
+                        <td>$ @ViewBag.pro.Price.ToString("###0.00")</td>
+                        <td>@item.Quality</td>
+                        <td>$ @item.Price.ToString("#,##0.00")</td>
+                        @*<td>
+                            <a href="/Products/Detail/@item.IdProduct"><i class="fa fa-list" aria-hidden="true"></i></a> |
+                            <a href="/Products/Delete/@item.IdProduct"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>*@
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <table class="table" style="width:40%; height:100px;">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date Created</th>
+                    <th scope="col">Customer</th>
+                    @*<th scope="col">Emloyee</th>*@
+                    <th scope="col">Total</th>
+                    <th scope="col">PDF</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">@Model.IdBill</th>
+                    <td>@Model.Date_Created</td>
+                    <td>@ViewBag.customer.Name</td>
+                    @*<td>@ViewBag.emloyee.Name</td>*@
+                    <td>$ @Model.Total.Value.ToString("#,##0.00")</td>
+                    <td>
+                        @*<a href="/Bills/ExportPDFDetail/@Model.IdBill" target="_blank"><i class="fa fa-print" aria-hidden="true"></i></a>*@
+                        @using (Html.BeginForm("ExportPDFDetail", "Bills", FormMethod.Post, new { target = "_blank" }))
+                        {
+                            @Html.HiddenFor(m => m.IdBill, new { @class = "form-control" })
+                            <input type="submit" value="PDF" style="font-size: 20px; padding:5px 10px; margin:10px;" formtarget="_blank" />
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+

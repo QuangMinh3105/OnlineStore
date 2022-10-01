@@ -1,0 +1,85 @@
+﻿@using CanonStore.Models
+@model CanonStore.Models.Comment
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+}
+
+<div class="main">
+    <h2>Edit Product</h2>
+    <div class="form_content">
+
+        <div class="form_product">
+
+            @using (Html.BeginForm("Edit", "Comments", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="row">
+
+                    @Html.HiddenFor(m => m.Id, new { @class = "form-control", @readonly = "readonly" })<br><br>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(m => m.Date, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBox("Date", Model.Date.Value.ToString("dd/MM/yyy"), new { @class = "form-control", @readonly = "readonly" })
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Rating, new { @class = "form_label" })
+                    <br>
+                    <br>
+                    @for (int i = 0; i < Model.Rating; i++)
+                    {
+                        <span class="fa fa-star" style="font-size:25px;"></span>
+                    }
+                    @for (int i = (int)Model.Rating; i < 5; i++)
+                    {
+                        <span class="fa fa-star-o" style="font-size:25px;"></span>
+                    }
+                </div>
+
+                <div class="row">
+                    @{
+                        Product product = ctx.Products.Where(p => p.Id_product == (int)Model.Id_Product).FirstOrDefault();
+                    }
+                    @Html.Label("Product", new { @class = "form_label" })
+                    <br>
+                    @Html.TextBox("Product", product.Name, new { @class = "form-control", @readonly = "readonly" })
+                    <br>
+                    <img src="~/Content/images/@product.Image" alt="Alternate Text" style="width:20%;" />
+                    <br>
+                </div>
+
+
+                <div class="row">
+                    @{
+                        Customer customer = ctx.Customers.Where(c => c.Id == (int)Model.Id_Customer).FirstOrDefault();
+                    }
+                    @Html.Label("Customer", new { @class = "form_label" })
+                    <br>
+                    @Html.TextBox("Customer", customer.Name, new { @class = "form-control", @readonly = "readonly" })
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Com_txt, new { @class = "form_label" })
+                    <br>
+                    @Html.TextAreaFor(m => m.Com_txt, new { @class = "form-control" })
+                    <br>
+                    <br>
+                </div>
+
+                <div class="btn_row">
+                    <input type="submit" value="Edit Product" class="btn_addproduct" />
+                </div>
+            }
+
+        </div>
+
+
+    </div>
+
+</div>
+

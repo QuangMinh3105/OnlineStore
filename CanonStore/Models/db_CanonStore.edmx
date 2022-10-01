@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db_CanonStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accessories">
+          <Key>
+            <PropertyRef Name="Id_Acc" />
+          </Key>
+          <Property Name="Id_Acc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_Acc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Bill_details">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="IdBill" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdProduct" Type="int" Nullable="false" />
+          <Property Name="Quality" Type="int" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_Created" Type="date" />
+        </EntityType>
+        <EntityType Name="Bill_Status">
+          <Key>
+            <PropertyRef Name="IdStatus" />
+          </Key>
+          <Property Name="IdStatus" Type="int" Nullable="false" />
+          <Property Name="NameStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Bills">
+          <Key>
+            <PropertyRef Name="IdBill" />
+          </Key>
+          <Property Name="IdBill" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date_Created" Type="date" Nullable="false" />
+          <Property Name="IdCustomer" Type="int" Nullable="false" />
+          <Property Name="IdEmployee" Type="int" Nullable="false" />
+          <Property Name="Total" Type="float" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Discount_code" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_Product" Type="int" />
+          <Property Name="Rating" Type="float" />
+          <Property Name="Id_Customer" Type="int" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Com_txt" Type="varchar" MaxLength="1000" />
+          <Property Name="Id_Bill" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="DayOfBirth" Type="date" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="DateCreated" Type="date" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Discounts">
+          <Key>
+            <PropertyRef Name="Dis_Code" />
+          </Key>
+          <Property Name="Dis_Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dis_Description" Type="varchar" MaxLength="50" />
+          <Property Name="Date_Start" Type="date" />
+          <Property Name="Date_End" Type="date" />
+          <Property Name="Discount_Value" Type="int" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+          <Property Name="DayOfBirth" Type="date" />
+          <Property Name="DateCreated" Type="date" />
+        </EntityType>
+        <EntityType Name="Product_Types">
+          <Key>
+            <PropertyRef Name="IdType" />
+          </Key>
+          <Property Name="IdType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="Id_product" />
+          </Key>
+          <Property Name="Id_product" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Acc_Id" Type="int" />
+          <Property Name="Warranty" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+          <Property Name="Date_Created" Type="date" />
+          <Property Name="Quantity_in_Stock" Type="int" />
+          <Property Name="Aperture" Type="varchar" MaxLength="50" />
+          <Property Name="Focal_Distance" Type="varchar" MaxLength="50" />
+          <Property Name="Shutter_Speed" Type="varchar" MaxLength="50" />
+          <Property Name="Is_Available" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Bill_Bill_Status">
+          <End Role="Bill_Status" Type="Self.Bill_Status" Multiplicity="0..1" />
+          <End Role="Bills" Type="Self.Bills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill_Status">
+              <PropertyRef Name="IdStatus" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_Customer">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+          <End Role="Bills" Type="Self.Bills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="IdCustomer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_details_Bill">
+          <End Role="Bills" Type="Self.Bills" Multiplicity="1" />
+          <End Role="Bill_details" Type="Self.Bill_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bills">
+              <PropertyRef Name="IdBill" />
+            </Principal>
+            <Dependent Role="Bill_details">
+              <PropertyRef Name="IdBill" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_details_Product">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="Bill_details" Type="Self.Bill_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id_product" />
+            </Principal>
+            <Dependent Role="Bill_details">
+              <PropertyRef Name="IdProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_Discounts">
+          <End Role="Discounts" Type="Self.Discounts" Multiplicity="0..1" />
+          <End Role="Bills" Type="Self.Bills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Discounts">
+              <PropertyRef Name="Dis_Code" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="Discount_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_Emloyee">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Bills" Type="Self.Bills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="IdEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Accessory">
+          <End Role="Accessories" Type="Self.Accessories" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accessories">
+              <PropertyRef Name="Id_Acc" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Acc_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product_Type">
+          <End Role="Product_Types" Type="Self.Product_Types" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_Types">
+              <PropertyRef Name="IdType" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="proc_AVG_star_product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="proc_sumproductbymonth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="datetmp" Type="date" Mode="In" />
+        </Function>
+        <Function Name="proc_sumsalesbydate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="datetmp" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="proc_sumsalesbymonth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="datetmp" Type="date" Mode="In" />
+        </Function>
+        <Function Name="proc_sumsalesbyyear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="datetmp" Type="date" Mode="In" />
+        </Function>
+        <Function Name="proc_Top5bestsellingproduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="db_CanonStoreModelStoreContainer">
+          <EntitySet Name="Accessories" EntityType="Self.Accessories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bill_details" EntityType="Self.Bill_details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bill_Status" EntityType="Self.Bill_Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bills" EntityType="Self.Bills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Discounts" EntityType="Self.Discounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product_Types" EntityType="Self.Product_Types" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Bill_Bill_Status" Association="Self.FK_Bill_Bill_Status">
+            <End Role="Bill_Status" EntitySet="Bill_Status" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_Customer" Association="Self.FK_Bill_Customer">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_details_Bill" Association="Self.FK_Bill_details_Bill">
+            <End Role="Bills" EntitySet="Bills" />
+            <End Role="Bill_details" EntitySet="Bill_details" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_details_Product" Association="Self.FK_Bill_details_Product">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Bill_details" EntitySet="Bill_details" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_Discounts" Association="Self.FK_Bill_Discounts">
+            <End Role="Discounts" EntitySet="Discounts" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_Emloyee" Association="Self.FK_Bill_Emloyee">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Accessory" Association="Self.FK_Product_Accessory">
+            <End Role="Accessories" EntitySet="Accessories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product_Type" Association="Self.FK_Product_Product_Type">
+            <End Role="Product_Types" EntitySet="Product_Types" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_CanonStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Accessory">
+          <Key>
+            <PropertyRef Name="Id_Acc" />
+          </Key>
+          <Property Name="Id_Acc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_Acc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Product_Accessory" FromRole="Accessories" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Bill_details">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="IdBill" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdProduct" Type="Int32" Nullable="false" />
+          <Property Name="Quality" Type="Int32" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_Created" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Bill" Relationship="Self.FK_Bill_details_Bill" FromRole="Bill_details" ToRole="Bills" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_Bill_details_Product" FromRole="Bill_details" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Bill_Status">
+          <Key>
+            <PropertyRef Name="IdStatus" />
+          </Key>
+          <Property Name="IdStatus" Type="Int32" Nullable="false" />
+          <Property Name="NameStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_Bill_Status" FromRole="Bill_Status" ToRole="Bills" />
+        </EntityType>
+        <EntityType Name="Bill">
+          <Key>
+            <PropertyRef Name="IdBill" />
+          </Key>
+          <Property Name="IdBill" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date_Created" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IdCustomer" Type="Int32" Nullable="false" />
+          <Property Name="IdEmployee" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="Double" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Discount_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Bill_details" Relationship="Self.FK_Bill_details_Bill" FromRole="Bills" ToRole="Bill_details" />
+          <NavigationProperty Name="Bill_Status" Relationship="Self.FK_Bill_Bill_Status" FromRole="Bills" ToRole="Bill_Status" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Bill_Customer" FromRole="Bills" ToRole="Customers" />
+          <NavigationProperty Name="Discount" Relationship="Self.FK_Bill_Discounts" FromRole="Bills" ToRole="Discounts" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Bill_Emloyee" FromRole="Bills" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Product" Type="Int32" />
+          <Property Name="Rating" Type="Double" />
+          <Property Name="Id_Customer" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Com_txt" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Bill" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DayOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateCreated" Type="DateTime" Precision="0" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_Customer" FromRole="Customers" ToRole="Bills" />
+        </EntityType>
+        <EntityType Name="Discount">
+          <Key>
+            <PropertyRef Name="Dis_Code" />
+          </Key>
+          <Property Name="Dis_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dis_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Start" Type="DateTime" Precision="0" />
+          <Property Name="Date_End" Type="DateTime" Precision="0" />
+          <Property Name="Discount_Value" Type="Int32" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_Discounts" FromRole="Discounts" ToRole="Bills" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DayOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="DateCreated" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_Emloyee" FromRole="Employees" ToRole="Bills" />
+        </EntityType>
+        <EntityType Name="Product_Types">
+          <Key>
+            <PropertyRef Name="IdType" />
+          </Key>
+          <Property Name="IdType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Product_Product_Type" FromRole="Product_Types" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id_product" />
+          </Key>
+          <Property Name="Id_product" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Acc_Id" Type="Int32" />
+          <Property Name="Warranty" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Created" Type="DateTime" Precision="0" />
+          <Property Name="Quantity_in_Stock" Type="Int32" />
+          <Property Name="Aperture" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Focal_Distance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Shutter_Speed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Is_Available" Type="Boolean" />
+          <NavigationProperty Name="Accessory" Relationship="Self.FK_Product_Accessory" FromRole="Products" ToRole="Accessories" />
+          <NavigationProperty Name="Bill_details" Relationship="Self.FK_Bill_details_Product" FromRole="Products" ToRole="Bill_details" />
+          <NavigationProperty Name="Product_Types" Relationship="Self.FK_Product_Product_Type" FromRole="Products" ToRole="Product_Types" />
+        </EntityType>
+        <Association Name="FK_Product_Accessory">
+          <End Role="Accessories" Type="Self.Accessory" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accessories">
+              <PropertyRef Name="Id_Acc" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Acc_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_details_Bill">
+          <End Role="Bills" Type="Self.Bill" Multiplicity="1" />
+          <End Role="Bill_details" Type="Self.Bill_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bills">
+              <PropertyRef Name="IdBill" />
+            </Principal>
+            <Dependent Role="Bill_details">
+              <PropertyRef Name="IdBill" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_details_Product">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="Bill_details" Type="Self.Bill_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="Id_product" />
+            </Principal>
+            <Dependent Role="Bill_details">
+              <PropertyRef Name="IdProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_Bill_Status">
+          <End Role="Bill_Status" Type="Self.Bill_Status" Multiplicity="0..1" />
+          <End Role="Bills" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill_Status">
+              <PropertyRef Name="IdStatus" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_Customer">
+          <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Bills" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="IdCustomer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_Discounts">
+          <End Role="Discounts" Type="Self.Discount" Multiplicity="0..1" />
+          <End Role="Bills" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Discounts">
+              <PropertyRef Name="Dis_Code" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="Discount_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bill_Emloyee">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Bills" Type="Self.Bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Bills">
+              <PropertyRef Name="IdEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product_Type">
+          <End Role="Product_Types" Type="Self.Product_Types" Multiplicity="1" />
+          <End Role="Products" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_Types">
+              <PropertyRef Name="IdType" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="Type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_CanonStoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accessories" EntityType="Self.Accessory" />
+          <EntitySet Name="Bill_details" EntityType="Self.Bill_details" />
+          <EntitySet Name="Bill_Status" EntityType="Self.Bill_Status" />
+          <EntitySet Name="Bills" EntityType="Self.Bill" />
+          <EntitySet Name="Comments" EntityType="Self.Comment" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Discounts" EntityType="Self.Discount" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Product_Types" EntityType="Self.Product_Types" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <AssociationSet Name="FK_Product_Accessory" Association="Self.FK_Product_Accessory">
+            <End Role="Accessories" EntitySet="Accessories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_details_Bill" Association="Self.FK_Bill_details_Bill">
+            <End Role="Bills" EntitySet="Bills" />
+            <End Role="Bill_details" EntitySet="Bill_details" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_details_Product" Association="Self.FK_Bill_details_Product">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Bill_details" EntitySet="Bill_details" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_Bill_Status" Association="Self.FK_Bill_Bill_Status">
+            <End Role="Bill_Status" EntitySet="Bill_Status" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_Customer" Association="Self.FK_Bill_Customer">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_Discounts" Association="Self.FK_Bill_Discounts">
+            <End Role="Discounts" EntitySet="Discounts" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bill_Emloyee" Association="Self.FK_Bill_Emloyee">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Bills" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product_Type" Association="Self.FK_Product_Product_Type">
+            <End Role="Product_Types" EntitySet="Product_Types" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <FunctionImport Name="proc_AVG_star_product" ReturnType="Collection(db_CanonStoreModel.proc_AVG_star_product_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="proc_sumproductbymonth" ReturnType="Collection(db_CanonStoreModel.proc_sumproductbymonth_Result)">
+            <Parameter Name="datetmp" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="proc_sumsalesbydate" ReturnType="Collection(db_CanonStoreModel.proc_sumsalesbydate_Result)">
+            <Parameter Name="datetmp" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="proc_sumsalesbymonth" ReturnType="Collection(db_CanonStoreModel.proc_sumsalesbymonth_Result)">
+            <Parameter Name="datetmp" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="proc_sumsalesbyyear" ReturnType="Collection(db_CanonStoreModel.proc_sumsalesbyyear_Result)">
+            <Parameter Name="datetmp" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="proc_Top5bestsellingproduct" ReturnType="Collection(db_CanonStoreModel.proc_Top5bestsellingproduct_Result)" />
+        </EntityContainer>
+        <ComplexType Name="proc_AVG_star_product_Result">
+          <Property Type="Int32" Name="Id_Product" Nullable="true" />
+          <Property Type="Double" Name="AVG_Star" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="proc_sumproductbymonth_Result">
+          <Property Type="Int32" Name="Product" Nullable="false" />
+          <Property Type="Int32" Name="Quality" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="proc_sumsalesbydate_Result">
+          <Property Type="DateTime" Name="Date_Created" Nullable="false" />
+          <Property Type="Double" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="proc_sumsalesbymonth_Result">
+          <Property Type="String" Name="Date_Created" Nullable="false" MaxLength="26" />
+          <Property Type="Double" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="proc_sumsalesbyyear_Result">
+          <Property Type="Int32" Name="Date_Created" Nullable="true" />
+          <Property Type="Double" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="proc_Top5bestsellingproduct_Result">
+          <Property Type="Int32" Name="Product" Nullable="false" />
+          <Property Type="Int32" Name="Quality" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_CanonStoreModelStoreContainer" CdmEntityContainer="db_CanonStoreEntities">
+          <EntitySetMapping Name="Accessories">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Accessory">
+              <MappingFragment StoreEntitySet="Accessories">
+                <ScalarProperty Name="Id_Acc" ColumnName="Id_Acc" />
+                <ScalarProperty Name="Name_Acc" ColumnName="Name_Acc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bill_details">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Bill_details">
+              <MappingFragment StoreEntitySet="Bill_details">
+                <ScalarProperty Name="IdBill" ColumnName="IdBill" />
+                <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bill_Status">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Bill_Status">
+              <MappingFragment StoreEntitySet="Bill_Status">
+                <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+                <ScalarProperty Name="NameStatus" ColumnName="NameStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bills">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Bill">
+              <MappingFragment StoreEntitySet="Bills">
+                <ScalarProperty Name="IdBill" ColumnName="IdBill" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="IdCustomer" ColumnName="IdCustomer" />
+                <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Discount_code" ColumnName="Discount_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Comment">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="Id_Customer" ColumnName="Id_Customer" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Com_txt" ColumnName="Com_txt" />
+                <ScalarProperty Name="Id_Bill" ColumnName="Id_Bill" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="DayOfBirth" ColumnName="DayOfBirth" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Discounts">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Discount">
+              <MappingFragment StoreEntitySet="Discounts">
+                <ScalarProperty Name="Dis_Code" ColumnName="Dis_Code" />
+                <ScalarProperty Name="Dis_Description" ColumnName="Dis_Description" />
+                <ScalarProperty Name="Date_Start" ColumnName="Date_Start" />
+                <ScalarProperty Name="Date_End" ColumnName="Date_End" />
+                <ScalarProperty Name="Discount_Value" ColumnName="Discount_Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="DayOfBirth" ColumnName="DayOfBirth" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_Types">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Product_Types">
+              <MappingFragment StoreEntitySet="Product_Types">
+                <ScalarProperty Name="IdType" ColumnName="IdType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="db_CanonStoreModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Id_product" ColumnName="Id_product" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Acc_Id" ColumnName="Acc_Id" />
+                <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="Quantity_in_Stock" ColumnName="Quantity_in_Stock" />
+                <ScalarProperty Name="Aperture" ColumnName="Aperture" />
+                <ScalarProperty Name="Focal_Distance" ColumnName="Focal_Distance" />
+                <ScalarProperty Name="Shutter_Speed" ColumnName="Shutter_Speed" />
+                <ScalarProperty Name="Is_Available" ColumnName="Is_Available" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="proc_AVG_star_product" FunctionName="db_CanonStoreModel.Store.proc_AVG_star_product">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_AVG_star_product_Result">
+                <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+                <ScalarProperty Name="AVG_Star" ColumnName="AVG_Star" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="proc_sumproductbymonth" FunctionName="db_CanonStoreModel.Store.proc_sumproductbymonth">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumproductbymonth_Result">
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="proc_sumsalesbydate" FunctionName="db_CanonStoreModel.Store.proc_sumsalesbydate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumsalesbydate_Result">
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="proc_sumsalesbymonth" FunctionName="db_CanonStoreModel.Store.proc_sumsalesbymonth">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumsalesbymonth_Result">
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="proc_sumsalesbyyear" FunctionName="db_CanonStoreModel.Store.proc_sumsalesbyyear">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_sumsalesbyyear_Result">
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="proc_Top5bestsellingproduct" FunctionName="db_CanonStoreModel.Store.proc_Top5bestsellingproduct">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db_CanonStoreModel.proc_Top5bestsellingproduct_Result">
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="Quality" ColumnName="Quality" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

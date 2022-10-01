@@ -1,0 +1,377 @@
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll.config
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\CanonStore.pdb
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe.config
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.rsp
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe.config
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.rsp
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.AppContext.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Console.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Http.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Sockets.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.ValueTuple.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe.config
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.rsp
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\WebGrease.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.pdb
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.AssemblyReference.cache
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CoreCompileInputs.cache
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CopyComplete
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.dll
+C:\Users\duyru\Desktop\Hoc tap\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.pdb
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll.config
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\CanonStore.pdb
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe.config
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.rsp
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe.config
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.rsp
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.AppContext.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Console.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Http.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Sockets.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.ValueTuple.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe.config
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.rsp
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\WebGrease.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.pdb
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CoreCompileInputs.cache
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CopyComplete
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.pdb
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.AssemblyReference.cache
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\DocumentFormat.OpenXml.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\ExcelNumberFormat.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\System.IO.Packaging.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.pdb
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\DocumentFormat.OpenXml.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\ExcelNumberFormat.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\BouncyCastle.Crypto.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\itextsharp.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\itextsharp.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll.config
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\CanonStore.pdb
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe.config
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.rsp
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe.config
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.rsp
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.AppContext.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Console.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Http.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Sockets.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.ValueTuple.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe.config
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.rsp
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\BouncyCastle.Crypto.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\DocumentFormat.OpenXml.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\ExcelNumberFormat.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\itextsharp.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\PagedList.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\PagedList.Mvc.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.IO.Packaging.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\WebGrease.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.pdb
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\DocumentFormat.OpenXml.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\ExcelNumberFormat.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\itextsharp.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\PagedList.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\PagedList.Mvc.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.pdb
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.AssemblyReference.cache
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CoreCompileInputs.cache
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CopyComplete
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.dll
+C:\Users\duyru\Desktop\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.pdb
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\PagedList.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\PagedList.Mvc.dll
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\PagedList.xml
+C:\Users\duyru\Desktop\Hoc tap\2133\DoAnChuyenNganh_A\Project\OnlineShop_CanonStore\CanonStore\bin\PagedList.Mvc.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll.config
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\CanonStore.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\CanonStore.pdb
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.exe.config
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\csc.rsp
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.exe.config
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\csi.rsp
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.AppContext.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Console.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Http.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.exe.config
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\vbc.rsp
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\BouncyCastle.Crypto.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\DocumentFormat.OpenXml.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\ExcelNumberFormat.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\itextsharp.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\PagedList.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\PagedList.Mvc.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.IO.Packaging.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\WebGrease.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.pdb
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\ClosedXML.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\DocumentFormat.OpenXml.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\EntityFramework.SqlServer.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\ExcelNumberFormat.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\itextsharp.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\PagedList.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\PagedList.Mvc.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Helpers.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Mvc.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Optimization.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.Razor.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\Newtonsoft.Json.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\Antlr3.Runtime.pdb
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.AssemblyReference.cache
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CoreCompileInputs.cache
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.csproj.CopyComplete
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.dll
+C:\Users\Admins\OneDrive\Desktop\OnlineShop_CanonStore11\OnlineShop_CanonStore\CanonStore\obj\Debug\CanonStore.pdb

@@ -1,0 +1,47 @@
+﻿@model CanonStore.Models.Employee
+@{
+    Layout = null;
+    ViewBag.Title = "Login";
+
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/css/_AdminLoginStyle.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="form_login">
+
+
+        @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+        {
+            <h1>Login</h1>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                @Html.TextBoxFor(c => c.UserName, "", new { @class = "input_data", @placehoder = "Username" })
+                @Html.ValidationMessageFor(c => c.UserName)
+                <br />
+
+
+                <label for="psw"><b>Password</b></label>
+                @Html.PasswordFor(c => c.Password, new { @class = "input_data", @placehoder = "Password" })
+                @Html.ValidationMessageFor(c => c.Password)
+                <br />
+
+
+                <button type="submit">Login</button>
+
+            </div>
+
+
+        }
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

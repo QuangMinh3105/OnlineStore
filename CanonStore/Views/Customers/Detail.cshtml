@@ -1,0 +1,86 @@
+﻿@model CanonStore.Models.Customer
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    float T = 0;
+}
+
+<div class="main" >
+    <h1>Customers</h1><br />
+    
+    <div style="display:flex;min-height:300px;">
+        <div style="background-color: #616161; width: 250px; display: flex; justify-content: center; ">
+            <img src="~/Content/images/@Model.Image" style="height:150px; padding: 40px 10px;" alt="Alternate Text" />
+        </div>
+        <div>
+            <table style="width:100%;height:100%;">
+                <tr>
+                    <th>Name:</th>
+                    <td>@Model.Name</td>
+                </tr>
+                <tr>
+                    <th>Telephone:</th>
+                    <td>@Model.Phone</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th>Adress</th>
+                    <td>@Model.Address</td>
+                </tr>
+                <tr>
+                    <th>Day Of Birth</th>
+                    <td>@Model.DayOfBirth.Value.ToString("dd/MM/yyy")</td>
+
+                </tr>
+                <tr>
+                    <th>Date Created</th>
+                    <td>@Model.DateCreated.Value.ToString("dd/MM/yyy")</td>
+                </tr>
+
+            </table>
+        </div>
+
+
+    </div>
+
+    <br />
+    <h1>Bill</h1><br />
+
+    <table class="table" style="width:50%;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.bills)
+            {
+                <tr>
+                    <th scope="row">@item.IdBill</th>
+                    <td>@item.Date_Created.ToString("dd/MM/yyy")</td>
+                    <td>$ @item.Total.ToString("#,##0.##")</td>
+                    <td>
+                        <a href="/Bills/Detail/@item.IdBill">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </a>
+                        @*|<a href="/Bills/Delete/@ViewBag.bills">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>*@
+                    </td>
+                </tr>
+
+                T += item.Total;
+
+            }
+        </tbody>
+    </table>
+    <br />
+    <h3>Total amount purchased: $ @T.ToString("#,##0.##")</h3>
+</div>
+

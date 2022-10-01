@@ -1,0 +1,68 @@
+﻿@model CanonStore.Models.Discount
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="main">
+    <h2>Add Product</h2>
+    <div class="form_content">
+        <div class="form_product">
+
+            @using (Html.BeginForm("Create", "Discounts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+
+                <div class="row">
+
+                    @Html.LabelFor(m => m.Dis_Code, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Dis_Code, new { @class = "form-control" })<br>
+                    @Html.ValidationMessageFor(m => m.Dis_Code)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Date_Start, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Date_Start, new { @class = "form-control", type = "date" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Date_Start)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Date_End, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Date_End, new { @class = "form-control", type = "date" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Date_End)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Discount_Value, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Discount_Value, new { @class = "form-control" })<br>
+                    @Html.ValidationMessageFor(m => m.Discount_Value)
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Dis_Description, new { @class = "form_label" })
+                    <br>
+                    @Html.TextAreaFor(m => m.Dis_Description, new { @class = "form-control" })<br>
+                    @Html.ValidationMessageFor(m => m.Dis_Description)
+                    <br>
+                    <br>
+                </div>
+
+
+
+                <div class="btn_row">
+                    <input type="submit" value="Add " class="btn_addproduct">
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,114 @@
+﻿@using CanonStore.Models
+@model List<CanonStore.Models.ItemCart>
+@{
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+    ViewBag.Title = "Payment";
+    Layout = "~/Views/Shared/_shopLayout.cshtml";
+    int id = Convert.ToInt32(Session["CustomerId"]);
+    Customer customer = ctx.Customers.Where(c => c.Id == id).SingleOrDefault();
+    if (Session["Dis_code"] != null)
+    {
+
+        ViewBag.Dis_code = Session["Dis_code"];
+        ViewBag.Dis_Value = Session["Dis_Value"];
+        ViewBag.dismess = "Discount code has been added.";
+    }
+    else
+    {
+
+        ViewBag.Dis_code = "";
+        ViewBag.Dis_Value = 0;
+    }
+}
+<style>
+    .com_btn {
+        width: 280px;
+        text-align: center;
+        display: inline-block;
+        padding: 10px 55px;
+        background-color: #f0d43a;
+        color: #ffffff;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border: 1px solid #f0d43a;
+        margin-top: 15px;
+        display: block;
+        justify-content: center;
+    }
+
+        .com_btn:hover {
+            transition: all 0.3s;
+            background-color: #d5b810;
+            color: #ffffff;
+        }
+</style>
+
+<div class="d-flex justify-content-center min-vh-100">
+    <div class="p-5">
+        <h3>Order ( @DateTime.Now.ToString("dd-MM-yyyy") )</h3>
+        <hr>
+        <div class="col">
+            <h4>Name: @customer.Name</h4>
+        </div>
+        <div class="col">
+            <h4>Phone: @customer.Phone</h4>
+        </div>
+        <div class="col">
+            <h4>Adress: @customer.Address</h4>
+        </div>
+        <div class="col m-3">
+            <a href="~/Shop/CustomerEdit/@customer.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Change information</a>
+        </div>
+        <hr />
+        <h3>Bill</h3>
+        <div class="p-3 ">
+            <div class="left">
+                @foreach (var item in Model)
+                {
+                    <div class="row p-2 d-flex align-items-center">
+                        <img src="~/Content/images/@item.Producti.Image" alt="" style="width:15%;">
+                        <div class="col m-4">
+                            <h5>@item.Producti.Name</h5>
+                            <h5> Price: $ @item.Producti.Price.Value.ToString("#,##0.00")</h5>
+                        </div>
+                        <i class="fa fa-times m-4" aria-hidden="true"></i>
+                        <h5 class="m-4">@item.Quantity</h5>
+                        <div class="col m-4">
+                            <h5> Line Total </h5>
+                            <h5>$ @item.LineTotal.ToString("#,##0.00")</h5>
+                        </div>
+                    </div>
+                    <hr />
+                }
+                <div class="col d-flex justify-content-between">
+                    <h3>SubTotal:</h3>
+                    <h3>$ @ViewBag.Total.ToString("#,##0.00")</h3>
+                </div>
+                <div class="col d-flex justify-content-between">
+                    <h3>Discount code:</h3>
+                    <h3> @ViewBag.Dis_code</h3>
+                </div>
+                <div class="col d-flex justify-content-between">
+                    <h3>Discount: </h3>
+                    <h3>@ViewBag.Dis_Value %</h3>
+                </div>
+                <div class="col d-flex justify-content-between">
+                    @{
+                        float a = ViewBag.Total;
+                        float b = ViewBag.Dis_Value;
+                        float T = a * (b / 100);
+                        ViewBag.T = a - T;
+                    }
+                    <h3>Total:</h3>
+                    <h3> $ @ViewBag.T.ToString("#,##0.00")</h3>
+                </div>
+                <div class="col d-flex justify-content-between">
+                    <h3></h3>
+                    <a href="/Shop/PaymentComfirm" class="com_btn float-left">Complete payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

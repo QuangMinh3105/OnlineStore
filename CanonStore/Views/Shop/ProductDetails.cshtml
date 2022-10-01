@@ -1,0 +1,264 @@
+﻿@using CanonStore.Models
+@model CanonStore.Models.Product
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_shopLayout.cshtml";
+    db_CanonStoreEntities ctx = new db_CanonStoreEntities();
+}
+<style>
+    .main {
+        margin: 50px;
+    }
+
+    .container_detail {
+        margin: 0px 200px;
+    }
+
+    .detail_product {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+
+    .detail_img {
+        margin: 0px 100px;
+    }
+
+        .detail_img img {
+            margin: 20px;
+            height: 300px;
+        }
+
+    .detail {
+        margin: 10px;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+        .btn button {
+            border: none;
+            color: rgb(3, 3, 3);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+            .btn button:hover {
+                background-color: #9e9e9e;
+                color: black;
+            }
+
+    .detail_info {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+        .detail_info p {
+            text-transform: uppercase;
+            margin: 20px;
+        }
+
+        .detail_info .input-quality {
+            font-size: 30px;
+            width: 50px;
+            margin: 10px;
+        }
+
+    .detail_decription {
+        width: 80%;
+        margin: 80px auto;
+        justify-content: center;
+        background-color: #f3f1f3;
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+        .detail_decription .des_info {
+            font-size: 20px;
+        }
+</style>
+
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img-box d-flex justify-content-center">
+                <img src="~/Content/images/@Model.Image" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="detail_info">
+                    <p>@Model.Brand @Model.Name </p>
+                    @*<p> @Model.Name</p>*@
+                    <p>$ @Model.Price </p>
+                </div>
+                @using (Html.BeginForm("AddToCart", "Shop", FormMethod.Post, new { @class = "cart" }))
+                {
+                    @Html.HiddenFor(m => m.Id_product, new { @class = "form-control" })
+                    if (Model.Quantity_in_Stock <= 0 || Model.Is_Available != true)
+                    {
+                        <div class="btn">
+                            <h4>Out of Stock</h4>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="detail_info">
+                            @Html.TextBox("txtQuantity", "1", new { @type = "number", @min = "1", @max = Model.Quantity_in_Stock, @step = "1", @value = "1", @class = "input-quality" })
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Add to cart</button>
+                        </div>
+                        <div class="detail_product">
+                            <p>Number of products remaining: @Model.Quantity_in_Stock </p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <div class="row p-md-3" style="background-color: #f3f1f3;">
+            @{
+                Product_Types product_Type = ctx.Product_Types.Where(pt => pt.IdType == Model.Type).FirstOrDefault();
+            }
+            <div class="col-md-6">
+                <p>Brand: @Model.Brand</p>
+                <p>Type: @product_Type.Name  </p>
+                <p>Accessory: @ViewBag.acc.Name_Acc</p>
+                <p>Aperture: @Model.Aperture</p>
+                <p>Focal Distance: @Model.Focal_Distance</p>
+                <p>Shutter Speed: @Model.Shutter_Speed</p>
+            </div>
+            <div class="col-md-6">
+                <p>Description:</p>
+                <p> @Model.Description</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- client section -->
+<section class="client_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Comments
+            </h2>
+        </div>
+        <div class="carousel-wrap ">
+            <div class="owl-carousel client_owl-carousel">
+                @foreach (var com in ViewBag.Comment)
+                {
+                    <div class="item">
+                        <div class="box" style="min-height:350px;">
+                            <h6>
+                                @com.Date.ToString("dd/MM/yyyy")
+                            </h6>
+                            <div class="img-box">
+                                <img src="~/Content/images/Avatar.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <div class="client_info">
+                                    <div class="client_name">
+                                        <h5>
+                                            @{
+                                                int id = com.Id_Customer;
+                                                Customer customer = ctx.Customers.Where(c => c.Id == id).FirstOrDefault();
+                                            }
+                                            @customer.Name
+                                        </h5>
+                                    </div>
+                                    @for (int i = 0; i < com.Rating; i++)
+                                    {
+                                        <span class="fa fa-star" style="font-size:25px;"></span>
+                                    }
+                                    @for (int i = (int)com.Rating; i < 5; i++)
+                                    {
+                                        <span class="fa fa-star-o" style="font-size:25px;"></span>
+                                    }
+                                </div>
+                                <p>
+                                    @com.Com_txt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end client section -->
+
+
+<section class="shop_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Product
+            </h2>
+        </div>
+        <div class="row">
+            @foreach (var item in ViewBag.products3)
+            {
+                <div class="col-sm-6 col-xl-3">
+                    <div class="box">
+                        <a href="~/Shop/ProductDetails/@item.Id_product">
+                            <div class="img-box">
+                                <img src="~/Content/images/@item.Image" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    @item.Name
+                                </h6>
+                                <h6>
+                                    Price:
+                                    <span>
+                                        $@item.Price
+                                    </span>
+                                </h6>
+                            </div>
+                            <div class="new">
+                                <span>
+                                    @{ try
+                                        {
+                                            foreach (var i in ctx.proc_AVG_star_product((int?)item.Id_product))
+                                            {
+                                                @i.AVG_Star.Value.ToString("#.#") <i class="fa fa-star" aria-hidden="true"></i>
+                                            }
+                                        }
+                                        catch
+                                        {
+                                            <small>
+                                                0 <i class="fa fa-star" aria-hidden="true"></i>
+                                            </small>
+                                        }
+                                    }
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="btn-box">
+            <a href="~/Shop/Products">
+                View All
+            </a>
+        </div>
+    </div>
+</section>

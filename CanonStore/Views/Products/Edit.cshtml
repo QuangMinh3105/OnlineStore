@@ -1,0 +1,127 @@
+﻿@model CanonStore.Models.Product
+
+    @{
+        ViewBag.Title = "Edit";
+        Layout = "~/Views/Shared/AdminLayout.cshtml";
+    }
+    
+    <div class="main">
+        <h2>Edit Product</h2>
+        <div class="form_content">
+
+            <div class="form_product">
+
+                @using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="row">
+
+                        @Html.HiddenFor(m => m.Id_product, new { @class = "form-control" })<br><br>
+                    </div>
+
+                    <div class="row">
+                        @Html.LabelFor(m => m.Name, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Brand, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Brand, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Price, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Type, new { @class = "form_label" }) <br>
+                        @Html.DropDownListFor(m => m.Type,
+                            new SelectList(ViewBag.product_Types, "IdType", "Name"),
+                            new { @class = "form-control" })<br><br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Acc_Id, new { @class = "form_label" })
+                        <br>
+                        @Html.DropDownListFor(m => m.Acc_Id,
+                            new SelectList(ViewBag.accessories, "Id_Acc", "Name_Acc"),
+                            new { @class = "form-control" })<br><br>
+                    </div>
+
+                    <div class="row">
+                        @Html.LabelFor(m => m.Aperture, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Aperture, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Focal_Distance, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Focal_Distance, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Shutter_Speed, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Shutter_Speed, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+
+                    <div class="row">
+                        @Html.LabelFor(m => m.Quantity_in_Stock, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Quantity_in_Stock, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Warranty, new { @class = "form_label" })
+                        <br>
+                        @Html.TextBoxFor(m => m.Warranty, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Description, new { @class = "form_label" })
+                        <br>
+                        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.Is_Available, new { @class = "form_label" })
+                        <br>
+                        @Html.CheckBoxFor(m => m.Is_Available, new { @class = "form-control" })
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => m.ImageUpload, new { @class = "form_label" })
+                        <br>
+                        <input type="file" name="ImageUpload" id="ImageUpload" />
+                        @*@Html.TextBoxFor(m => m.Image, new { @class = "form-control" })*@
+                        <br>
+                        <br>
+                    </div>
+                    <div class="btn_row">
+                        <input type="submit" value="Edit Product" class="btn_addproduct" />
+                    </div>
+                }
+
+            </div>
+
+            <div style="width:50%">
+                <img src="~/Content/images/@Model.Image" alt="Alternate Text" style="width:80%;" />
+            </div>
+        </div>
+
+    </div>
+

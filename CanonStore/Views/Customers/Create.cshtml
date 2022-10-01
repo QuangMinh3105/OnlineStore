@@ -1,0 +1,91 @@
+﻿@model CanonStore.Models.Customer
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="main">
+    <h2>Add Customer</h2>
+    <div class="form_content">
+        <div class="form_product">
+
+            @using (Html.BeginForm("Create", "Customer", FormMethod.Post))
+            {
+                <div class="row">
+
+                    @Html.HiddenFor(m => m.Id, new { @class = "form-control" })<br><br>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(m => m.Name, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Name)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.DayOfBirth, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.DayOfBirth, new { @class = "form-control" ,type="date"})
+                    <br>
+                    @Html.ValidationMessageFor(m => m.DayOfBirth)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Phone, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Phone)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.UserName, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.UserName)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Password, new { @class = "form_label" })
+                    <br>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Password)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Email, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Email)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Address, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Address)
+                    <br>
+                </div>
+                @*<div class="row">
+                @Html.LabelFor(m => m.ImageUpload, new { @class = "form_label" })
+                <br><br>
+                @Html.TextBoxFor(m=>m.ImageUpload,new { type="file" })
+            <input type="file" name="ImageUpload" id="ImageUpload" />
+            <br><br>
+            </div>*@
+
+                <div class="btn_row">
+                    <input type="submit" value="Add Customer" class="btn_addproduct">
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>
+

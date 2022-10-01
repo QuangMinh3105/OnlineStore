@@ -1,0 +1,79 @@
+﻿@model PagedList.IPagedList<CanonStore.Models.Customer>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="main">
+    <h1>Customers</h1><br />
+    <div>
+        <a href="/Customer/Create" style="color:Highlight;">New Customer</a><br /><br />
+
+    </div>
+    <div style="text-align:center;margin-bottom:50px;">
+        @using (Html.BeginForm("Index", "Customer", FormMethod.Get))
+        {
+            <p>
+                Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @style = "font-size: 20px" })
+                <input type="submit" value="Search" style="font-size: 20px;" />
+            </p>
+        }
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col" style="text-decoration-line:underline;">
+                    @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Day Of Birth</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.Name</td>
+                    <td>@item.Address</td>
+                    <td>@item.Phone</td>
+                    <td>@item.UserName</td>
+                    <td>@item.DayOfBirth.Value.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <a href="/Customer/Detail/@item.Id">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </a> |
+                        <a href="/Customer/Edit/@item.Id">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a> |
+                        <a href="/Customer/Delete/@item.Id">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <section class="panel">
+        <div class="panel-body">
+            <div class="pull-right">
+                <br />
+                <!-- Thêm mã phân trang -->
+                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                <br />
+
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+                <!-- Kết thúc -->
+            </div>
+        </div>
+    </section>
+</div>
+

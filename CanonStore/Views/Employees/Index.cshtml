@@ -1,0 +1,53 @@
+﻿@model List<CanonStore.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="main">
+    <h1>Emloyees</h1><br />
+    <a href="/Employees/Create" style="color:Highlight;">New Emloyee</a><br /><br />
+    <table class="table">
+        <thead>
+            <tr>
+                @*<th scope="col">#</th>*@
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">User Name</th>
+                @*<th scope="col">Password</th>*@
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<th scope="row">@item.Id</th>*@
+                    <td>
+
+                        <img src="~/Content/images/@item.Image" style=" height: 100px;" alt="No Image" />
+                        <h3>
+                            @item.Name
+                        </h3>
+                    </td>
+                    <td>@item.Phone</td>
+                    <td>@item.UserName</td>
+                    @*<td>@item.Password</td>*@
+                    <td>@item.Email</td>
+
+                    <td>
+                        @*<a href="/Emloyee/Detail/@item.Id"><i class="fa fa-list" aria-hidden="true"></i></a> |*@
+                        <a href="~/Employees/Edit/@item.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                        <a href="~/Employees/Delete/@item.Id"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+

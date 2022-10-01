@@ -1,0 +1,71 @@
+﻿@model CanonStore.Models.Discount
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="main">
+    <h2>Edit Discount</h2>
+    <div class="form_content">
+
+        <div class="form_product">
+
+            @using (Html.BeginForm("Edit", "Discounts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+
+                <div class="row">
+                    @Html.LabelFor(m => m.Dis_Code, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Dis_Code, new { @class = "form-control" })
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.Label("Old Date Start", new { @class = "form_label" })<br />
+                    @Html.TextBox("Old Date Start", Model.Date_Start.Value.ToString("dd/MM/yyyy"), new { @class = "form-control", @readonly = "readonly" })<br /><br />
+                    @Html.LabelFor(m => m.Date_Start, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Date_Start, new { @class = "form-control", type = "date" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Date_Start)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.Label("Old Date End", new { @class = "form_label" })<br />
+                    @Html.TextBox("Old Date End", Model.Date_End.Value.ToString("dd/MM/yyyy"), new { @class = "form-control", @readonly = "readonly" })<br /><br />
+
+                    @Html.LabelFor(m => m.Date_End, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Date_End, new { @class = "form-control", type = "date" })
+                    <br>
+                    @Html.ValidationMessageFor(m => m.Date_End)
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Discount_Value, new { @class = "form_label" })
+                    <br>
+                    @Html.TextBoxFor(m => m.Discount_Value, new { @class = "form-control" })
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Dis_Description, new { @class = "form_label" })
+                    <br>
+                    @Html.TextAreaFor(m => m.Dis_Description, new { @class = "form-control" })
+                    <br>
+                    <br>
+                </div>
+                <div class="btn_row">
+                    <input type="submit" value="Edit " class="btn_addproduct" />
+                </div>
+
+            }
+
+        </div>
+
+        
+    </div>
+
+</div>
+
